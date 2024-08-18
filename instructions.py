@@ -193,7 +193,7 @@ def window_exit(event=None):
     window.destroy()
 
 
-def main():
+def tas_kagit_makas_NAZIF_KARACA():
     global window
 
     window = center_window()
@@ -220,4 +220,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    tas_kagit_makas_NAZIF_KARACA()

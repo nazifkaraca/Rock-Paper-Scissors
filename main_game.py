@@ -276,6 +276,69 @@ def end_game(user_continue, bot_continue):
         start_new_game()
 
 
+def setup_page1():
+    """
+    Setups first page in which user enters input.
+    """
+    global global_score_label, user_score_label, bot_score_label, game_label
+
+    info_frame_top = Frame(window)
+    info_frame_bottom = Frame(window)
+    info_frame_top.pack(side=TOP, pady=10, fill=X)
+    info_frame_bottom.pack(side=BOTTOM, pady=10, fill=X)
+
+    global_score_label = Label(info_frame_top, text=f"Genel Skor\nSen: {user_game_wins} || Bot: {bot_game_wins}",
+                            font=("Courier", 14, "bold"), fg="blue")
+    global_score_label.pack(anchor=CENTER)
+
+    score_frame = Frame(info_frame_bottom)
+    score_frame.pack(side=TOP, pady=5)
+    user_score_label = Label(score_frame, text=f"Sen: {user_score}", font=("Courier", 14, "bold"))
+    user_score_label.grid(row=0, column=0, padx=20)
+
+    bot_score_label = Label(score_frame, text=f"Bot: {bot_score}", font=("Courier", 14, "bold"))
+    bot_score_label.grid(row=0, column=1, padx=20)
+
+    game_frame = Frame(info_frame_bottom)
+    game_frame.pack(side=BOTTOM, pady=5)
+    game_label = Label(game_frame, text=f"Oyun: {game} || Round: {roundd}", font=("Courier", 14, "italic"), fg="red")
+
+    game_label.grid(row=1, column=0, padx=10)
+    main_frame.pack(fill=BOTH, expand=True)
+
+
+def setup_page2():
+    """
+    Setups user and bot choices (rock-paper-scissors) and shows result.
+    """
+    global page2, user_hand_label, user_ascii_label, bot_hand_label, bot_ascii_label
+    global user_input_label, bot_input_label, result_label
+    # set main frame for page 2
+    page2 = Frame(main_frame)
+    page2.pack(expand=True)
+    
+    ascii_frame= Frame(page2)
+    ascii_frame.pack(pady=20)
+    # show labels for which decision is whose and put ascii below them
+    user_hand_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"), justify=CENTER)
+    user_ascii_label = Label(ascii_frame, text="", font=("Courier", 12), justify=CENTER)
+    bot_hand_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"), justify=CENTER)
+    bot_ascii_label = Label(ascii_frame, text="", font=("Courier", 12), justify=CENTER)
+    
+    user_input_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"))
+    bot_input_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"))
+    result_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"), justify=CENTER, wraplength=800)
+
+    user_hand_label.grid(row=0, column=0, padx=50)
+    user_ascii_label.grid(row=1, column=0, padx=50)
+    bot_hand_label.grid(row=0, column=1, padx=50)
+    bot_ascii_label.grid(row=1, column=1, padx=50)
+
+    user_input_label.grid(row=2, column=0, columnspan=2, pady=10)
+    bot_input_label.grid(row=3, column=0, columnspan=2, pady=10)
+    result_label.grid(row=4, column=0, columnspan=2, pady=10)
+
+
 def window_exit(event=None):
     """
     Escape key quits game.
@@ -293,59 +356,11 @@ count = 0
 window = center_window()
 window.bind('<Return>', move_next_page)
 window.bind('<Escape>', window_exit)
-
 main_frame = Frame(window)
-info_frame_top = Frame(window)
-info_frame_bottom = Frame(window)
-info_frame_top.pack(side=TOP, pady=10, fill=X)
-info_frame_bottom.pack(side=BOTTOM, pady=10, fill=X)
 
-global_score_label = Label(info_frame_top, text=f"Genel Skor\nSen: {user_game_wins} || Bot: {bot_game_wins}",
-                           font=("Courier", 14, "bold"), fg="blue")
-global_score_label.pack(anchor=CENTER)
+setup_page1()
 
-score_frame = Frame(info_frame_bottom)
-score_frame.pack(side=TOP, pady=5)
-user_score_label = Label(score_frame, text=f"Sen: {user_score}", font=("Courier", 14, "bold"))
-user_score_label.grid(row=0, column=0, padx=20)
-
-bot_score_label = Label(score_frame, text=f"Bot: {bot_score}", font=("Courier", 14, "bold"))
-bot_score_label.grid(row=0, column=1, padx=20)
-
-game_frame = Frame(info_frame_bottom)
-game_frame.pack(side=BOTTOM, pady=5)
-game_label = Label(game_frame, text=f"Oyun: {game} || Round: {roundd}", font=("Courier", 14, "italic"), fg="red")
-
-game_label.grid(row=1, column=0, padx=10)
-
-
-main_frame.pack(fill=BOTH, expand=True)
-
-page2 = Frame(main_frame)
-page2.pack(expand=True)
-
-ascii_frame= Frame(page2)
-ascii_frame.pack(pady=20)
-
-user_hand_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"), justify=CENTER)
-user_ascii_label = Label(ascii_frame, text="", font=("Courier", 12), justify=CENTER)
-bot_hand_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"), justify=CENTER)
-bot_ascii_label = Label(ascii_frame, text="", font=("Courier", 12), justify=CENTER)
-
-
-user_input_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"))
-bot_input_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"))
-result_label = Label(ascii_frame, text="", font=("Courier", 16, "bold"), justify=CENTER, wraplength=800)
-
-user_hand_label.grid(row=0, column=0, padx=50)
-user_ascii_label.grid(row=1, column=0, padx=50)
-bot_hand_label.grid(row=0, column=1, padx=50)
-bot_ascii_label.grid(row=1, column=1, padx=50)
-
-
-user_input_label.grid(row=2, column=0, columnspan=2, pady=10)
-bot_input_label.grid(row=3, column=0, columnspan=2, pady=10)
-result_label.grid(row=4, column=0, columnspan=2, pady=10)
+setup_page2()
 
 pages = [game_choicer(), page2]
 
