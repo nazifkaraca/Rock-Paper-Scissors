@@ -1,6 +1,6 @@
 # Rock-Paper-Scissors
 
-**Even though it seems a classical Rock Scissors Paper game, it is not.**
+**Even though it seems like a classical Rock Scissors Paper game, it is not.**
 
 It consists of **three game modes** that will blow your mind.
 
