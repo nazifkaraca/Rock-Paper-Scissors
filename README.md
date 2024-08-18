@@ -22,5 +22,5 @@ _A quote from one of the enjoyers of this version of Rock Paper Scissors_
 _— A player who played the game just for a round (not a friend)_
 
 ---
-**_To run the project, run "instructions.py"_**
+**_Run "instructions.py"_**
 
