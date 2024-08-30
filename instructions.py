@@ -1,6 +1,7 @@
 from tkinter import *
 import os
 from style import *
+import subprocess
 
 
 def center_window():
@@ -165,7 +166,8 @@ def start_main_game(frame):
     """
     frame.destroy()
     window.destroy()
-    os.system('python main_game.py')
+
+    subprocess.Popen(['python', 'main_game.py'])
 
 
 def instant_writer(label, texts, frame, text_index=0, char_index=0):
