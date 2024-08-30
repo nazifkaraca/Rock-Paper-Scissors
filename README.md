@@ -22,6 +22,16 @@ _A quote from one of the enjoyers of this version of Rock Paper Scissors_
 _— A player who played the game just for a round (not a friend)_
 
 ---
+
+_Tested OS:_ **Windows / VSCode**
+
+_Python Version:_ **Python 3.12.3**
+
+_Libraries:_ **tkinter**
+
+_Modules:_ **subprocess, random**
+
+---
 **_How may I run this if I am a complete beginner?_**
 
 **_1. Clone Repo_**
@@ -52,19 +62,13 @@ _— A player who played the game just for a round (not a friend)_
 > source venv/bin/activate
 ---
 
-**_5. Install the Required Dependencies_**
-
-- Install the required packages listed in the 'requirements.txt' file.
-> pip install -r requirements.txt
----
-
-**_6. Run the Project_**
+**_5. Run the Project_**
 
 - After installing the dependencies, you can run the project!
 > python instructions.py
 ---
 
-**_7. Deactivate Virtual Env_**
+**_6. Deactivate Virtual Env_**
 
 - After you are done, deactivate the virtual environment by running
 > deactivate 
