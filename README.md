@@ -16,6 +16,12 @@ It consists of **three game modes** that will blow your mind.
   - Seer decides both for you and your opponent.
 
 ---
+
+![rock-paper-scissors](https://github.com/user-attachments/assets/3efc6a5b-2446-41fa-b2c1-8af52833e8c7)
+
+
+
+---
 _A quote from one of the enjoyers of this version of Rock Paper Scissors_
 > "Spectacular, entertaining, perplexing and stargazing"
 
