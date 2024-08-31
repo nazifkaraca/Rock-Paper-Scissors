@@ -28,6 +28,10 @@ def update_ascii_art(user_choice, bot_choice):
     """
     Updates hands (depicting rock/scissors/paper) based on game mode.
     """
+    # lowers input to impede conflicts - 01.09.2024
+    user_choice = user_choice.lower()
+    bot_choice = bot_choice.lower()
+    
     if selected_text.startswith("Bot için tercihini yap."):
 
         user_ascii_label.config(text=ascii_rock_scissors_paper[user_choice])
