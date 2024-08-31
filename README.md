@@ -17,15 +17,17 @@ It consists of **three game modes** that will blow your mind.
 
 ---
 
-![rock-paper-scissors](https://github.com/user-attachments/assets/3efc6a5b-2446-41fa-b2c1-8af52833e8c7)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/3efc6a5b-2446-41fa-b2c1-8af52833e8c7" alt="Depiction of the Rock Paper Scissors Version" />
+</p>
 
 
+<p align="center">
+  <i>A quote from one of the enjoyers of this version of Rock Paper Scissors:</i><br><br>
+  <span style="font-size: 1.2em;"><strong>"Spectacular, entertaining, perplexing and stargazing"</strong></span><br><br>
+  <i>— A player who played the game just for a round (not a friend)</i>
+</p>
 
----
-_A quote from one of the enjoyers of this version of Rock Paper Scissors_
-> "Spectacular, entertaining, perplexing and stargazing"
-
-_— A player who played the game just for a round (not a friend)_
 
 ---
 
